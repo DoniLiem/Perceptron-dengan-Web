@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pelatihan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h2>Proses Pelatihan</h2>
+
+    <div class="container">
+
+        <div class="back">
+            <a href="../menu/menu.html">Kembali</a>
+        </div>
+
+        <form id="myForm">
+            <div class="radio-group">
+                <label for="keterampilan">Kemampuan Komunikasi:</label>
+                <div>
+                    <label>
+                        <input type="radio" id="x1" name="keterampilan" value="Baik">
+                        Baik
+                    </label>
+                    <label>
+                        <input type="radio" id="x2" name="keterampilan" value="Cukup">
+                        Cukup
+                    </label>
+                    <label>
+                        <input type="radio" id="x3" name="keterampilan" value="Kurang">
+                        Kurang
+                    </label>
+                </div>
+            </div>
+            <div class="radio-group">
+                <label for="pengalaman">Pengalaman Kerja dibidang yang sama:</label>
+                <div>
+                    <label>
+                        <input type="radio" id="x4" name="pengalaman" value="1Tahun">
+                        Tidak ada
+                    </label>
+                    <label>
+                        <input type="radio" id="x5" name="pengalaman" value="2Tahun">
+                        1 Tahun
+                    </label>
+                    <label>
+                        <input type="radio" id="x6" name="pengalaman" value=">2tahun">
+                        >= 2 Tahun
+                    </label>
+                </div>
+            </div>
+            <div class="radio-group">
+                <label for="komunikasi">Hasil Wawancara:</label>
+                <div>
+                    <label>
+                        <input type="radio" id="x7" name="komunikasi" value="Baik">
+                        Baik
+                    </label>
+                    <label>
+                        <input type="radio" id="x8" name="komunikasi" value="Cukup">
+                        Cukup
+                    </label>
+                    <label>
+                        <input type="radio" id="x9" name="komunikasi" value="Kurang">
+                        Kurang
+                    </label>
+                </div>
+            </div>
+            <div class="radio-group">
+                <label for="status">Status Pelamar:</label>
+                <div>
+                    <label>
+                        <input type="radio" id="t" name="status" value="1">
+                        Diterima
+                    </label>
+                    <label>
+                        <input type="radio" id="xt" name="status" value="-1">
+                        Tidak Diterima
+                    </label>
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="button" onclick="submitForm()">Submit</button>
+                <button type="button" onclick="hitung()">Hitung</button>
+                <button type="button" onclick="simpanBobot()">Simpan</button>
+                <button type="button" onclick="hapusBobot()">Hapus</button>
+            </div>
+
+        </form>
+
+        <div class="table-container">
+            <table id="resultTable" style="display:none;">
+                <thead>
+                    <tr>
+                        <th>x1</th>
+                        <th>x2</th>
+                        <th>x3</th>
+                        <th>x4</th>
+                        <th>x5</th>
+                        <th>x6</th>
+                        <th>x7</th>
+                        <th>x8</th>
+                        <th>x9</th>
+                        <th>t</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container">
+            <table id="resultTable2" style="display:none;">
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="perceptron.js"></script>
+</body>
+
+</html>
